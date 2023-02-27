@@ -8,8 +8,7 @@ void decode(char a[],int len) {
     }
 }
 
-int main()
-{
+int main() {
     char a[]="A3B2C4A9";
     int len=(char)sizeof(a)/sizeof(a[0]);
     decode(a, len);
