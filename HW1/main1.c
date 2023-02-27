@@ -11,8 +11,7 @@ void encoding(char a[],int len) {
         }
     }
 }
-int main()
-{
+int main() {
     char a[]="AABBBCCCCDDD";
     int len=(char)sizeof(a)/sizeof(char);
     encoding(a,len);
