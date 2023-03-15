@@ -17,9 +17,11 @@ int main()
         printf("Fail2");
     }
     if((fp2=fopen("main2.text","w+"))==NULL) {
-        printf("Fail");
+        printf("Fail3");
     }
-    fprintf(fp2,"%s",read_arr);
+    if(fwrite(read_arr,sizeof(read_arr),1,fp2)!=1) {
+        printf("Fail4");
+    }
 
     return 0;
 }
