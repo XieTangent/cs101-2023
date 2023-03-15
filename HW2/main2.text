@@ -13,7 +13,7 @@ int main()
 {
     FILE*fp1;
     FILE*fp2;
-    if((fp1=fopen("main.c","r+"))==NULL) {
+    if((fp1=fopen("main2.c","r+"))==NULL) {
         printf("Fail1");
         exit(1);
     }
