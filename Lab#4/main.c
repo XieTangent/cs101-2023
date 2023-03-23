@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 replace_all(char* str,char oldchar,char newchar) {
-    while(*str!=' ') {
+    while(*str!='\0') {
         if(*str==oldchar) {
             *str=newchar;
         }
