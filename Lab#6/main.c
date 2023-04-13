@@ -9,7 +9,7 @@ int a(int i,int j) {
         j=1;
         a(i+1,j);
     }else {
-        printf("%d*%d=%d\n",i,j,i*j);
+        printf("%d*%d=%d ",i,j,i*j);
         a(i,j+1);
     }
 }
