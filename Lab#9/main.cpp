@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <cstring>
 
 using namespace std;
 
@@ -10,27 +9,29 @@ class ReplaceMyString {
     ReplaceMyString() {
         
     }
-    void replaceString(string m,string n) {
-        ifstream in;
+    void replaceString(string oldstr,string newstr) {
+        fstream in("main.cpp");
         ofstream out;
-        string read;
+        int pos=0;
         in.open("main.cpp");
         out.open("rmain.cpp");
-        while(!in.eof()) {
-            in>>read;
-            char *k=strstr(read,m);
-            if(k!=NULL) {
-                read=n;
+        string str((std::istreambuf_iterator<char>(in)), std::istreambuf_iterator<char>());
+        while(1==1) {
+            pos=str.find(oldstr,pos);
+            if(pos==-1) {
+                pos=0;
+                break;
             }
-            out<<read<<endl;
+            str.replace(pos,oldstr.length(),newstr);
+            pos+=newstr.length();
         }
+        out<<str<<endl;
         in.close();
         out.close();
     }
 };
 
-int main()
-{
+int main() {
     ReplaceMyString my;
     my.replaceString("IU","IU is best");
 
