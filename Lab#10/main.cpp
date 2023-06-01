@@ -34,7 +34,7 @@ class ReadClass {
         while(getline(in,line)) {
             if(line.find("class",0)==0) {
                 int pos=line.find(" ")+1;
-                cout<<line.substr(pos,line.find(" ",pos)-pos)<<endl;
+                cout<<line.substr(0,line.find(" ",pos))<<endl;
                 number++;
             }
         }
